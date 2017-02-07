@@ -1,0 +1,35 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assmbly/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/assembly-1.0.0.xsd">
+    <id>link-src</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>.</directory>
+            <useDefaultExcludes>true</useDefaultExcludes>
+            <excludes>
+                <exclude>.idea/**</exclude>
+                <exclude>.git/**</exclude>
+                <exclude>**/.gitignore</exclude>
+                <exclude>**/.svn</exclude>
+                <exclude>**/*.iws</exclude>
+                <exclude>**/*.ipr</exclude>
+                <exclude>**/*.iml</exclude>
+                <exclude>**/.classpath</exclude>
+                <exclude>**/.project</exclude>
+                <exclude>**/.settings</exclude>
+                <exclude>**/target/**</exclude>
+
+                <exclude>**/*.log</exclude>
+                <exclude>**/build/**</exclude>
+                <exclude>**/file:/**</exclude>
+                <exclude>**/SecurityAuth.audit*</exclude>
+            </excludes>
+        </fileSet>
+    </fileSets>
+
+
+</assembly>
